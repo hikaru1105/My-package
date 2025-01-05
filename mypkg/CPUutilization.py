@@ -3,8 +3,11 @@
 
 import rclpy
 import subprocess
+import logging
 from rclpy.node import Node
 from std_msgs.msg import String
+
+logging.basicConfig(filename='/tmp/mypkg.log', level=logging.INFO,format='%(asctime)s - %(message)s')
 
 def get_cpu_usage():
     result = subprocess.run("vmstat 1 2 | awk 'NR==3 {print $13, $14, $15}'", capture_output=True, text=True, shell=True)
@@ -24,7 +27,7 @@ def cb():
     msg = String()
     msg.data = cpu_usage
     pub.publish(msg)
-    node.get_logger().info(f"Published CPU usage data:\n{msg.data}")
+    logging.info(f"Published CPU usage: {msg.data}")
 
 def main():
     rclpy.init()
@@ -32,5 +35,6 @@ def main():
     node = Node("CPUutilization")
     pub = node.create_publisher(String, "cpu_usage", 10)
     node.create_timer(3.0, cb)
+    logging.info("CPU utilization node started")
     rclpy.spin(node)
 
