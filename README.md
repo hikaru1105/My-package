@@ -31,4 +31,4 @@ data: 'User CPU: 0%, System CPU: 0%, Idle CPU: 100%'
 ## ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
 ## Copyright
-- © 2024 Hikaru Nemoto 
+- © 2025 Hikaru Nemoto 
