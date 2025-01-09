@@ -22,7 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'cpuutilization = mypkg.CPUutilization:main',
+            'cpuutilization = mypkg.cpuutilization:main',
+            'listener.test =  mypkg.listener.test:main',
         ],
     },
 )
