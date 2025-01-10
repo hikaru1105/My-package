@@ -12,4 +12,3 @@ timeout 10 ros2 launch mypkg cpuutilization.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'User CPU'
-    
