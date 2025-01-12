@@ -13,5 +13,10 @@ def generate_launch_description():
         package='mypkg',
         executable='cpuutilization',
         )
+    listener_test = launch_ros.actions.Node(
+        package='mypkg',
+        executable='listener_test',
+        output='screen'
+        )
 
     return launch.LaunchDescription([cpuutilization])
