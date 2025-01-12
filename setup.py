@@ -23,6 +23,7 @@ setup(
     entry_points={
         'console_scripts': [
             'cpuutilization = mypkg.cpuutilization:main',
+            'listener_test = mypkg.listener_test:main',
         ],
     },
 )
