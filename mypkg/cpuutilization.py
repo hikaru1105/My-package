@@ -28,7 +28,7 @@ def cb():
 def main():
     rclpy.init()
     global node, pub
-    node = Node("CPUutilization")
+    node = Node("cpuutilization")
     pub = node.create_publisher(String, "cpu_usage", 10)
     node.create_timer(3.0, cb)
     rclpy.spin(node)
