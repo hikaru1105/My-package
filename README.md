@@ -1,13 +1,24 @@
-# My-package
-このリポジトリはロボットシステム学の授業で使用するROS2のパッケージです。
+# mypkg
+- ROS2のパッケージです。
 
-# CPU使用率を出力するノード
 [![test](https://github.com/hikaru1105/My-package/actions/workflows/test.yml/badge.svg)](https://github.com/hikaru1105/My-package/actions/workflows/test.yml)
 
-## 概要
+## ノード`cpuutilizaion.py`
 
-- このノードは現在使っているCPUの使用率のデータをROS2を用いて通信するものです。
+- このノードは現在使っているCPUの使用率のデータをトピック`cpu_usage`にパブリッシュするものです。
+## テスト用ノード
+### ノード`listener_test.py`
 
+- このノードは通信が行えていることを確認するためのものです。
+- トピック`cpu_usage`をサブスクライブします。
+### ノード
+## トピック`cpu_usage`
+
+このトピックはCPUの使用率を表示します。
+
+- `User CPU`　　ユーザーモードで使用されているCPUの割合
+- `System CPU`　カーネルモードで使用されているCPUの割合
+- `Idle CPU`　　使用されていないCPUの割合
 ## 実行方法
 
 ### 実行方法の例
