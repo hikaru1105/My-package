@@ -19,4 +19,4 @@ def generate_launch_description():
         output='screen'
         )
 
-    return launch.LaunchDescription([cpuutilization])
+    return launch.LaunchDescription([cpuutilization, listener_test])
